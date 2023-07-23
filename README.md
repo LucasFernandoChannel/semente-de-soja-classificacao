@@ -59,7 +59,7 @@ As redes neurais convolucionais são uma importante ferramenta na automatizaçã
 
 Assim alimentar todo mundo é um desafio muito complexo, principalmente em países em desenvolvimento. Segundo estimativas da Organização das Nações Unidas (ONU), a quantidade de pessoas em situação de fome chegou a 282 milhões em 2020 apenas no continente africano (a região do globo que mais sofre com esse problema)⁴. Logo é imprescindível construir processos de produção de alimentos que extraiam o máximo possível das terras já cultivadas, mas de forma economicamente viável e ambientalmente sustentável.
 
-A inteligência artificial tem se mostrado muito útil na resolução de problemas do mundo conteporâneo. Ela torna processos mais eficientes, reduz custos, aumenta a produtividade e melhora a qualidade de vida. Essa ferramenta, aliada com outras, tem potencial para construir uma agricultura capaz de resolver o problema da fome e tornar as empresas do setor mais competitivas e lucrativas, gerando assim ganhos para toda a sociedade.
+A inteligência artificial tem se mostrado muito útil na resolução de problemas do mundo conteporâneo. Ela torna processos mais eficientes, reduz custos, aumenta a produtividade e melhora a qualidade de vida. Essa técnica, aliada a outras, tem potencial para construir uma agricultura capaz de resolver o problema da fome e tornar as empresas do setor mais competitivas e lucrativas, gerando assim ganhos para toda a sociedade.
 
 ## Referências
 
