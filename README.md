@@ -29,12 +29,15 @@ A solução encontrada para o problema foi desenvolver uma rede neural convoluci
 </figure>
 <br>
 <br>
-As redes neurais convolucionais (CNN - Convolutional Neural Networks) são uma classe de algoritmos de Aprendizado Profundo (Deep Learning) que vem sendo utilizada com bastante sucesso em aplicações relacionadas com reconhecimento e classificação de imagens¹. Nesse trabalho buscou-se referências acadêmicas do uso da CNN na detecção de doenças em plantas. Muitos artigos foram encontrados principamente aqueles que discutiam classificação de doenças baseado em fotografias de folhas. Após estudar um pouco percebeu-se que essas soluções poderiam ser adaptadas e utilizadas também no reconhecimento e categorização de grãos. 
-
+As redes neurais convolucionais (CNN - Convolutional Neural Networks) são uma classe de algoritmos de Aprendizado Profundo (Deep Learning) que vem sendo utilizada com bastante sucesso em aplicações relacionadas com reconhecimento e classificação de imagens¹. Nesse trabalho buscou-se referências acadêmicas do uso da CNN na detecção de doenças em plantas. Muitos artigos foram encontrados principamente aqueles que discutiam classificação de doenças baseado em fotografias de folhas. Após estudar um pouco percebeu-se que essas soluções poderiam ser adaptadas para o reconhecimento e categorização de grãos. 
+<br>
+<br>
 Posteriormente foi encontrado a base de dados Soybean Seeds Classification Dataset², que contém milhares de imagens de grãos de soja separadas em cinco categorias. A solução proposta é a construção de um modelo de aprendizado profundo que aprende através desses dados e, consequentemente, é capaz de classificar imagens de grãos de soja em: quebrado, imaturo, intacto, rachado e manchado.
-
+<br>
+<br>
 Utilizou-se o ambiente Google Colab conectado a uma GPU T4 para treinar o software. Uma rotina em Python que usou vários recursos da biblioteca Tensorflow foi escrita a fim de se chegar ao objetivo final. Após vários testes de tentativa e erro, encontrou-se os parâmetros corretos para se obter uma solução eficiente, isto é, com taxa de erro tolerável e sem problemas de underfitting ou overfitting.
-
+<br>
+<br>
 Como foi dito anteriormente, a precisão da rotina gira em torno de 85% para um processo de treino de 100 epochs. Foi constatado que aumentar a quantidade de epochs não faz com que as curvas training e validation loss diminuam ainda mais. Ao contrário o gráfico de validation loss tende a aumentar muito mostrando assim um modelo com overfitting. Mesmo após aplicar técnicas de Data Augmentation, Dropout e Batch Normalization com o intuito de aumentar o tempo de treino, por exemplo 150 epochs, o modelo não teve ganhos significativos de precisão. Então optou-se por deixar o software em sua versão mais simples.
 <br>
 <br>
@@ -52,7 +55,10 @@ Como foi dito anteriormente, a precisão da rotina gira em torno de 85% para um 
 </figure>
 <br>
 <br>
-Depois do treino o modelo com a maior precisão na base de dados de validação foi salvo num arquivo H5. Apesar de ser possível testar e verificar a solução criada pelo próprio Google Colab (ver as primeiras três imagens), exportar o modelo é fundamental para utilizá-lo em alguma aplicação prática. Uma das ferramentas que podem ser construídas é a consulta por uma parte externa, por exemplo um aplicativo de celular. Nesse caso o arquivo com extensão H5 estaria armazenado num servidor e receberia imagens enviadas do smartphone do usuário via aplicativo. O software analizaria a fotografia e retornaria a classificação mais provavél, que seria exibida na tela do aparelho. Essa aplicação poderia ser utilizada por agrônomos, agricultores e outros profissionais a fim de identificarem os melhores grãos ou determinar a qualidade de um lote com base numa amostra, seja de sementes para plantio ou como matéria-prima para unidades produtoras de alimento.
+Depois do treino o modelo com a maior precisão na base de dados de validação foi salvo num arquivo H5. Apesar de ser possível testar e verificar a solução criada pelo próprio Google Colab (ver as primeiras três imagens), exportar o modelo é fundamental para utilizá-lo em alguma aplicação prática. Uma das ferramentas que podem ser construídas é a consulta por uma parte externa, por exemplo um aplicativo de celular.
+<br>
+<br>
+Nesse caso o arquivo com extensão H5 estaria armazenado num servidor e receberia imagens enviadas do smartphone do usuário via aplicativo. O software analizaria a fotografia e retornaria a classificação mais provavél, que seria exibida na tela do aparelho. Essa aplicação poderia ser utilizada por agrônomos, agricultores e outros profissionais a fim de identificarem os melhores grãos ou determinar a qualidade de um lote com base numa amostra, seja de sementes para plantio ou como matéria-prima para unidades produtoras de alimento.
 
 ## Conclusão
 As redes neurais convolucionais são uma importante ferramenta na automação do processo de classificação e reconhecimento de imagens. Essa técnica de Deep Learning pode ser empregada em vários setores, dentre eles a agricultura. O aumento da produtividade das lavouras, bem como o rendimento dos processos da indústria alimentícia, é fundamental para um mundo cada vez mais populoso. Atualmente (julho de 2023) há pouco mais de 8 bilhões de pessoas e a expectativa é chegar a quase 10 bilhões em 2050³.
@@ -65,7 +71,7 @@ A inteligência artificial tem se mostrado muito útil na resolução de problem
 
 França Neto, J. B.; Krzyzanowski, F. C.; Henning, A. A. **Plantas de alto desempenho e a produtividade da soja**. Seed News, v.16, p.8-11, 2012.
 
-Pequenas Empresas & Grandes Negócios. **Alta concorrência no setor da alimentação faz inovação ser essencial para empresário do setor**, 2017. Disponível em: <https://revistapegn.globo.com/Administracao-de-empresas/noticia/2017/10/alta-concorrencia-no-setor-da-alimentacao-faz-inovacao-ser-essencial-para-empresario-do-setor.html>.
+Pequenas Empresas & Grandes Negócios. **Alta concorrência no setor da alimentação faz inovação ser essencial para empresário do setor**, 2017. Disponível em: <https://revistapegn.globo.com/Administracao-de-empresas/noticia/2017/10/alta-concorrencia-no-setor-da-alimentacao-faz-inovacao-ser-essencial-para-empresario-do-setor.html>
 
 Wei Y, Li X, Pan X, Li L. **Nondestructive Classification of Soybean Seed Varieties by Hyperspectral Imaging and Ensemble Machine Learning Algorithms**. Sensors. 2020; 20(23):6980.
 
